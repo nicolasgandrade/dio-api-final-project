@@ -54,7 +54,7 @@ Para rodar o projeto, é necessário:
 ### POST de novo departamento e o retorno ao cliente
 ![Screenshot from 2022-01-29 18-03-27](https://user-images.githubusercontent.com/82426254/151677501-aab2990b-cad2-4c22-986b-8f42f1ed490e.png)
 
-### GET em departments
+### GET em department
 ![Screenshot from 2022-01-29 18-04-54](https://user-images.githubusercontent.com/82426254/151677541-03c1c266-e9f3-4b07-8ab0-b0d7cbed72f0.png)
 
 ### GET em employee
