@@ -35,4 +35,10 @@ public class DepartmentController {
         Department object = departmentService.findById(id);
         return ResponseEntity.ok().body(object);
     }
+
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        departmentService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
 }

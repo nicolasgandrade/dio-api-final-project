@@ -31,4 +31,10 @@ public class DepartmentServiceImpl implements DepartmentService {
         return departmentRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Id not found."));
     }
+
+    @Override
+    public void delete(Long id) {
+        Department obj = departmentRepository.getById(id);
+        departmentRepository.delete(obj);
+    }
 }

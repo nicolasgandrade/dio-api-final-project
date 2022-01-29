@@ -9,4 +9,5 @@ public interface DepartmentService {
     Department save(Department department);
     List<Department> findAll();
     Department findById(Long id);
+    void delete(Long id);
 }
