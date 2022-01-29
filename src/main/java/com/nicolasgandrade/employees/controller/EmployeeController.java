@@ -1,7 +1,7 @@
 package com.nicolasgandrade.employees.controller;
 
 import com.nicolasgandrade.employees.model.Employee;
-import com.nicolasgandrade.employees.service.EmployeeService;
+import com.nicolasgandrade.employees.service.implementation.EmployeeServiceImpl;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,13 +15,13 @@ import java.util.List;
 @RequestMapping("/api/v1/employee")
 public class EmployeeController {
 
-    private final EmployeeService employeeService;
+    private final EmployeeServiceImpl employeeService;
 
     @PostMapping
     public ResponseEntity<Employee> save(@RequestBody Employee employee) {
         Employee object = employeeService.save(employee);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("{/id}").buildAndExpand(object.getId()).toUri();
-        return ResponseEntity.created(uri).body(employeeService.save(object));
+        return ResponseEntity.created(uri).body(object);
     }
 
     @GetMapping
