@@ -35,4 +35,10 @@ public class EmployeeController {
         Employee object = employeeService.findById(id);
         return ResponseEntity.ok().body(object);
     }
+
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        employeeService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
 }
