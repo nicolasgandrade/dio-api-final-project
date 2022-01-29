@@ -14,6 +14,8 @@ GET - `/api/v1/employee` -> Encontra todos os funcionários da empresa.
 
 GET - `/api/v1/employee/{id}` -> Encontra um funcionário específico.
 
+DELETE - `/api/v1/employee/{id}` -> Deleta um funcionário específico.
+
 POST - `/api/v1/employee` -> Permite a criação de um novo funcionário com os seguintes parâmetros:  
 ```
 {  
@@ -30,6 +32,8 @@ POST - `/api/v1/employee` -> Permite a criação de um novo funcionário com os 
 GET - `/api/v1/department` -> Encontra todos os departamentos da empresa.
 
 GET - `/api/v1/department/{id}` -> Encontra um departamento específico.
+
+DELETE - `/api/v1/department/{id}` -> Deleta um departamento específico.
 
 POST - `/api/v1/department` -> Permite a criação de um novo departamento com os seguintes parâmetros:  
 ```
